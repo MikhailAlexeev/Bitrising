@@ -7,12 +7,12 @@ public class Player : MonoBehaviour
 {
     public int moveForce;
     public int jumpForce;
-    private Rigidbody2D _rb;
+    private Rigidbody2D rb;
     
     // Start is called before the first frame update
     void Start()
     {
-        _rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -23,17 +23,17 @@ public class Player : MonoBehaviour
 
     public void MoveLeft()
     {
-        _rb.AddForce(Vector2.left * (moveForce * Time.deltaTime), ForceMode2D.Force);
+        rb.AddForce(new Vector2(-moveForce,0), ForceMode2D.Force);
     }
     
     public void MoveRight()
     {
-        _rb.AddForce(Vector2.right * (moveForce * Time.deltaTime), ForceMode2D.Force);
+        rb.AddForce(new Vector2(moveForce, 0), ForceMode2D.Force);
     }
 
     public void Jump()
     {
-        _rb.AddForce(Vector2.up * (jumpForce * Time.deltaTime), ForceMode2D.Force);
+        rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Force);
     }
 
     public void PlayerControl()
@@ -53,5 +53,4 @@ public class Player : MonoBehaviour
             Jump();
         }
     }
-    
 }
