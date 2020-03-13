@@ -8,12 +8,15 @@ public class Player : MonoBehaviour
 {
     public int moveForce;
     public int jumpForce;
+    
     private Rigidbody2D rb;
+    private Joystick joystick;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        joystick = FindObjectOfType<Joystick>();
     }
 
     // Update is called once per frame

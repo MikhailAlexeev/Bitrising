@@ -8,6 +8,7 @@ public class Platform : MonoBehaviour
     public Transform startPoint;
     public Transform endPoint;
     public GameObject platform;
+    [Range(0,1)]
     public float speed;
 
     private float current;
