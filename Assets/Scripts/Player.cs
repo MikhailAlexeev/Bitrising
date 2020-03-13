@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 {
     public int moveForce;
     public int jumpForce;
-    
+
     private Rigidbody2D rb;
     private Joystick joystick;
 
@@ -23,7 +23,6 @@ public class Player : MonoBehaviour
     void Update()
     {
         Controls();
-        OffScreenRestart();
     }
 
     public void MoveLeft()
@@ -56,19 +55,6 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
-        }
-    }
-
-    public void Death()
-    {
-        SceneManager.LoadScene(0);
-    }
-
-    public void OffScreenRestart()
-    {
-        if (transform.position.x > 10.3f|| transform.position.x < -10.3f)
-        {
-            Death();
         }
     }
 }
