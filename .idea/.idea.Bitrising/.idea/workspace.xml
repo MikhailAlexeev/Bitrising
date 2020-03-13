@@ -8,6 +8,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Store/Joystick Pack/Scripts/Joysticks/FixedJoystick.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Platform.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -69,6 +70,8 @@
       <workItem from="1584045010128" duration="145000" />
       <workItem from="1584045176655" duration="1717000" />
       <workItem from="1584047411422" duration="2717000" />
+      <workItem from="1584136917794" duration="18000" />
+      <workItem from="1584136967109" duration="672000" />
     </task>
     <servers />
   </component>
