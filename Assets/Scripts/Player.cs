@@ -8,36 +8,40 @@ public class Player : MonoBehaviour
 {
     public int moveForce;
     public int jumpForce;
+    public Joystick _joystick;
 
-    private Rigidbody2D rb;
-    private Joystick joystick;
+    private Rigidbody2D _rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        joystick = FindObjectOfType<Joystick>();
+        _rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
         Controls();
+        JoystickMove();
     }
 
     public void MoveLeft()
     {
-        rb.AddForce(new Vector2(-moveForce, 0), ForceMode2D.Force);
+        _rb.AddForce(new Vector2(-moveForce, 0.0f), ForceMode2D.Force);
     }
 
     public void MoveRight()
     {
-        rb.AddForce(new Vector2(moveForce, 0), ForceMode2D.Force);
+        _rb.AddForce(new Vector2(moveForce, 0), ForceMode2D.Force);
     }
 
+    public void JoystickMove()
+    {
+        _rb.AddForce(new Vector2(_joystick.Horizontal*moveForce,0.0f));
+    }
     public void Jump()
     {
-        rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Force);
+        _rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Force);
     }
 
     public void Controls()
