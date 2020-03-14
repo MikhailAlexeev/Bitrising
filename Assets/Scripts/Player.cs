@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
 {
     public int moveForce;
     public int jumpForce;
+    private TriggerDetector _triggerDetector;
     public Joystick _joystick;
 
     private Rigidbody2D _rb;
@@ -16,6 +17,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _triggerDetector = GetComponentInChildren<TriggerDetector>();
     }
 
     // Update is called once per frame
@@ -37,11 +39,15 @@ public class Player : MonoBehaviour
 
     public void JoystickMove()
     {
-        _rb.AddForce(new Vector2(_joystick.Horizontal*moveForce,0.0f));
+        _rb.AddForce(new Vector2(_joystick.Horizontal * moveForce, 0.0f));
     }
+
     public void Jump()
     {
-        _rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Force);
+        if (_triggerDetector.InTrigger)
+        {
+            _rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Force);
+        }
     }
 
     public void Controls()
@@ -56,7 +62,7 @@ public class Player : MonoBehaviour
             MoveRight();
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
             Jump();
         }

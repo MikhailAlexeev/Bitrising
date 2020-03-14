@@ -45,6 +45,7 @@
           <e p="FPSUnlocker.cs" t="Include" />
           <e p="Platform.cs" t="Include" />
           <e p="Player.cs" t="Include" />
+          <e p="TriggerDetector.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="UILogic.cs" t="Include" />
           </e>
