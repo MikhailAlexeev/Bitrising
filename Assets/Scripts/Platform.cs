@@ -1,41 +1,47 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
-    public Transform startPoint;
-    public Transform endPoint;
-    public GameObject platform;
-    [Range(0,1)]
+    public Transform[] points;
     public float speed;
+    public int curPoint = 0;
 
-    private float current;
-    private float dir;
-    
-    // Start is called before the first frame update
-    void Start()
+    private Transform from;
+    private Transform to;
+
+    private const float DIST_EPSILON = 0.001f;
+
+
+    private void Awake()
     {
-        current = 0.0f;
-        dir = 1.0f;
+        SetFromTo();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        current += dir * speed * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, to.position, Time.deltaTime * speed);
 
-        if (current > 1.0f)
+        if (ReachedFinish())
         {
-            current = 1.0f;
-            dir = -1.0f;
-        } else if (current < 0.0f)
-        {
-            current = 0.0f;
-            dir = 1.0f;
+            curPoint++;
+
+            if (curPoint >= points.Length)
+            {
+                curPoint = 0;
+            }
+
+            SetFromTo();
         }
-        
-        platform.transform.position = Vector3.Lerp(startPoint.position, endPoint.position, current);
+    }
+
+    private void SetFromTo()
+    {
+        from = points[curPoint];
+        to = curPoint + 1 >= points.Length ? points[0] : points[curPoint + 1];
+    }
+
+    private bool ReachedFinish()
+    {
+        return Vector2.Distance(transform.position, to.position) < DIST_EPSILON;
     }
 }
