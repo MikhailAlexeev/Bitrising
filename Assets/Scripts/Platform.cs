@@ -4,7 +4,7 @@ public class Platform : MonoBehaviour
 {
     public Transform[] points;
     public float speed;
-    public int curPoint = 0;
+    public int currentPoint = 0;
 
     private Transform from;
     private Transform to;
@@ -23,11 +23,11 @@ public class Platform : MonoBehaviour
 
         if (ReachedFinish())
         {
-            curPoint++;
+            currentPoint++;
 
-            if (curPoint >= points.Length)
+            if (currentPoint >= points.Length)
             {
-                curPoint = 0;
+                currentPoint = 0;
             }
 
             SetFromTo();
@@ -36,8 +36,8 @@ public class Platform : MonoBehaviour
 
     private void SetFromTo()
     {
-        from = points[curPoint];
-        to = curPoint + 1 >= points.Length ? points[0] : points[curPoint + 1];
+        from = points[currentPoint];
+        to = currentPoint + 1 >= points.Length ? points[0] : points[currentPoint + 1];
     }
 
     private bool ReachedFinish()
