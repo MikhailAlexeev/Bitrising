@@ -29,7 +29,6 @@ public class Platform : MonoBehaviour
             {
                 currentPoint = 0;
             }
-
             SetFromTo();
         }
     }

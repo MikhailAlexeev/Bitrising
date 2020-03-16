@@ -25,8 +25,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FPSUnlocker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Jump.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Platform.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
       </list>
     </option>
   </component>
@@ -89,6 +89,7 @@
       <workItem from="1584210732671" duration="53000" />
       <workItem from="1584210806277" duration="10000" />
       <workItem from="1584210837063" duration="838000" />
+      <workItem from="1584385697025" duration="3001000" />
     </task>
     <servers />
   </component>

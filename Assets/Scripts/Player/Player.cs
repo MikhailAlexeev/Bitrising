@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
         {
             rb.velocity += Vector2.up * (Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime);
         }
-        // Set to work with joystick button
+        // Must make this work with joystick button
         // else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.Space))
         // {
         //     rb.velocity += Vector2.up * (Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime);
@@ -63,6 +63,23 @@ public class Player : MonoBehaviour
         if (triggerDetector.InTrigger)
         {
             rb.AddForce(Vector2.up * jumpForce);
+            transform.SetParent(null);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.transform.GetComponentInParent<Platform>() != null)
+        {
+            transform.SetParent(other.transform);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.transform.GetComponentInParent<Platform>() != null)
+        {
+            transform.SetParent(null);
         }
     }
 
