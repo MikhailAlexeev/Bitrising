@@ -3413,10 +3413,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveForce: 26
-  joystick: {fileID: 2552465659817352229}
+  joystick: {fileID: 0}
   jumpForce: 330
   fallMultiplier: 2.85
   lowJumpMultiplier: 2
+  scale: {x: 0.5, y: -0.45}
+  duration: 0.2
+  elasticity: 1
 --- !u!114 &1872046143
 MonoBehaviour:
   m_ObjectHideFlags: 0

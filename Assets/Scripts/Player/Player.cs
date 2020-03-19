@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,11 +9,16 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     public int moveForce;
-
     public Joystick joystick;
-    [Header("Jump controls")] public float jumpForce;
+    [Header("Jump controls")] 
+    public float jumpForce;
     public float fallMultiplier;
     public float lowJumpMultiplier;
+    [Header("Jump Punch Effect")] 
+    public Vector2 scale;
+    public float duration;
+    public float elasticity;
+    
     private TriggerDetector triggerDetector;
 
 
@@ -62,6 +68,7 @@ public class Player : MonoBehaviour
     {
         if (triggerDetector.InTrigger)
         {
+            JumpPunch();
             rb.AddForce(Vector2.up * jumpForce);
             transform.SetParent(null);
         }
@@ -99,5 +106,10 @@ public class Player : MonoBehaviour
         {
             Jump();
         }
+    }
+
+    void JumpPunch()
+    {
+        transform.DOPunchScale(scale , duration, elasticity:elasticity);
     }
 }
