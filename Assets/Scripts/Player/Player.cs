@@ -10,19 +10,19 @@ public class Player : MonoBehaviour
 {
     public int moveForce;
     public Joystick joystick;
-    [Header("Jump controls")] 
-    public float jumpForce;
+    [Header("Jump controls")] public float jumpForce;
     public float fallMultiplier;
     public float lowJumpMultiplier;
-    [Header("Jump Punch Effect")] 
-    public Vector2 scale;
+    [Header("Jump Punch Effect")] public Vector2 scale;
     public float duration;
     public float elasticity;
-    
+
     private TriggerDetector triggerDetector;
 
 
     private Rigidbody2D rb;
+    private float horizontalInput;
+    private bool jumpInput;
 
     void Start()
     {
@@ -32,42 +32,28 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        Controls();
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+        if (Input.GetKeyDown(KeyCode.Space)) jumpInput = true;
+        else jumpInput = false;
+
         JoystickMove();
     }
 
     private void FixedUpdate()
     {
-        if (rb.velocity.y < 0)
-        {
-            rb.velocity += Vector2.up * (Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime);
-        }
-        // Get this to work with joystick button
-        // else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.Space))
-        // {
-        //     rb.velocity += Vector2.up * (Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime);
-        // }
+        MoveHorizontal();
+        Jump();
+        JumpAmplifier();
     }
 
     void MoveHorizontal()
     {
-        float horizontalInput = Input.GetAxisRaw("Horizontal");
         rb.velocity += new Vector2(horizontalInput, 0) * (moveForce * Time.deltaTime);
     }
 
     void JoystickMove()
     {
         rb.AddForce(new Vector2(joystick.Horizontal * moveForce, 0.0f));
-    }
-
-    void Jump()
-    {
-        if (triggerDetector.InTrigger)
-        {
-            JumpPunch();
-            rb.AddForce(Vector2.up * jumpForce);
-            transform.SetParent(null);
-        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -86,18 +72,36 @@ public class Player : MonoBehaviour
         }
     }
 
-    void Controls()
-    {
-        MoveHorizontal();
 
-        if (Input.GetKeyDown(KeyCode.Space))
+    void Jump()
+    {
+        if (jumpInput)
         {
-            Jump();
+            if (triggerDetector.InTrigger)
+            {
+                JumpPunch();
+                rb.AddForce(Vector2.up * jumpForce);
+                transform.SetParent(null);
+            }
         }
     }
 
     void JumpPunch()
     {
-        transform.DOPunchScale(scale , duration, elasticity:elasticity);
+        transform.DOPunchScale(scale, duration, elasticity: elasticity);
+    }
+
+    void JumpAmplifier()
+    {
+        if (rb.velocity.y < 0)
+        {
+            rb.velocity += Vector2.up * (Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime);
+
+            // Get this to work with joystick button
+            // else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.Space))
+            // {
+            //     rb.velocity += Vector2.up * (Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime);
+            // }
+        }
     }
 }

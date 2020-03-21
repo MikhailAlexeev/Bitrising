@@ -9,7 +9,6 @@ public class UILogic : MonoBehaviour
     public Player player;
     public Button restartButton;
     
-    // Update is called once per frame
     void Update()
     {
         PlayerOffScreen();
