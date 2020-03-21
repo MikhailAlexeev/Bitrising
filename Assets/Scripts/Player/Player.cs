@@ -42,21 +42,17 @@ public class Player : MonoBehaviour
         {
             rb.velocity += Vector2.up * (Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime);
         }
-        // Must make this work with joystick button
+        // Get this to work with joystick button
         // else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.Space))
         // {
         //     rb.velocity += Vector2.up * (Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime);
         // }
     }
 
-    void MoveLeft()
+    void MoveHorizontal()
     {
-        rb.velocity += Vector2.left * (moveForce * Time.deltaTime);
-    }
-
-    void MoveRight()
-    {
-        rb.velocity += Vector2.right * (moveForce * Time.deltaTime);
+        float horizontalInput = Input.GetAxis("Horizontal");
+        rb.velocity += new Vector2(horizontalInput, 0) * (moveForce * Time.deltaTime);
     }
 
     void JoystickMove()
@@ -92,15 +88,7 @@ public class Player : MonoBehaviour
 
     void Controls()
     {
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-        {
-            MoveLeft();
-        }
-
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        {
-            MoveRight();
-        }
+        MoveHorizontal();
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
