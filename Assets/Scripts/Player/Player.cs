@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
 
     void MoveHorizontal()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
         rb.velocity += new Vector2(horizontalInput, 0) * (moveForce * Time.deltaTime);
     }
 
