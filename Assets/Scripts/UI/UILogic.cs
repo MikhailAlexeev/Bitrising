@@ -21,6 +21,7 @@ public class UILogic : MonoBehaviour
             player.gameObject.SetActive(false);
             restartButton.gameObject.SetActive(true);
         }
+     
     }
     
     public void Restart()
