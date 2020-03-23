@@ -3412,7 +3412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92f4c192e534ed649afb2dedb6589381, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveForce: 26
+  moveForce: 22
   joystick: {fileID: 2552465659817352229}
   joystickButton: {fileID: 1691680984}
   jumpForce: 330
