@@ -1194,6 +1194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3491924704b87b4483118a19b9e2357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  logic: {fileID: 1120842120}
 --- !u!1 &433102239
 GameObject:
   m_ObjectHideFlags: 0
@@ -2667,7 +2668,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50b1c281cd0fb524c818bb5a940ceae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onRestartAction: 1
+  onRestartAction: 0
+  onWinAction: 1
 --- !u!4 &1120842122
 Transform:
   m_ObjectHideFlags: 0

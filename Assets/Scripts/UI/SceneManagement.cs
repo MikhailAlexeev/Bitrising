@@ -13,8 +13,15 @@ public class SceneManagement : MonoBehaviour
         LoadThisScene,
         LoadNextScene
     }
+    
+    public enum OnWinAction
+    {
+        LoadThisScene,
+        LoadNextScene
+    }
 
     public OnRestartAction onRestartAction;
+    public OnWinAction onWinAction;
 
     private Scene currentScene;
 
@@ -31,6 +38,26 @@ public class SceneManagement : MonoBehaviour
                 SceneManager.LoadScene(currentScene.buildIndex);
                 break;
             case OnRestartAction.LoadNextScene:
+                if (currentScene.buildIndex < SceneManager.sceneCountInBuildSettings-1)
+                {
+                    SceneManager.LoadScene(currentScene.buildIndex + 1);
+                }
+                else
+                {
+                    SceneManager.LoadScene(0);
+                }
+                break;
+        }
+    }
+
+    public void Win()
+    {
+        switch (onWinAction)
+        {
+            case OnWinAction.LoadThisScene:
+                SceneManager.LoadScene(currentScene.buildIndex);
+                break;
+            case OnWinAction.LoadNextScene:
                 if (currentScene.buildIndex < SceneManager.sceneCountInBuildSettings-1)
                 {
                     SceneManager.LoadScene(currentScene.buildIndex + 1);
