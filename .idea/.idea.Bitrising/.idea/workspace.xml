@@ -11,8 +11,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Target.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Store/Joystick Pack/Scripts/Joysticks/FixedJoystick.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D815B7EF-AC42-4EEB-8E05-3965CCCB1F98/c7/4da7c96b/SceneManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SceneManagement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FPSUnlocker.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UILogic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/TriggerDetector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Platform.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -27,8 +28,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Jump.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Platform.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Target.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/SceneManagement.cs" />
       </list>
     </option>
   </component>
@@ -97,7 +99,7 @@
       <workItem from="1584913970898" duration="174000" />
       <workItem from="1584982814868" duration="4417000" />
       <workItem from="1585046970652" duration="717000" />
-      <workItem from="1585173146034" duration="1841000" />
+      <workItem from="1585173146034" duration="4247000" />
     </task>
     <servers />
   </component>

@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Scroller.unity
+    guid: 5ebc040ba3130204c9f38569cf542915
+  - enabled: 1
     path: Assets/Scenes/Platforms.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

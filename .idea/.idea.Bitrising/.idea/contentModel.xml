@@ -48,7 +48,7 @@
           </e>
           <e p="Target.cs" t="Include" />
           <e p="UI" t="Include">
-            <e p="UILogic.cs" t="Include" />
+            <e p="SceneManagement.cs" t="Include" />
           </e>
         </e>
         <e p="Store" t="Include">
