@@ -43,7 +43,8 @@
           <e p="FPSUnlocker.cs" t="Include" />
           <e p="Platform.cs" t="Include" />
           <e p="Player" t="Include">
-            <e p="Player.cs" t="Include" />
+            <e p="Controller.cs" t="Include" />
+            <e p="Killer.cs" t="Include" />
             <e p="TriggerDetector.cs" t="Include" />
           </e>
           <e p="Target.cs" t="Include" />
@@ -152,6 +153,7 @@
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
+    <e p="C:\Users\Mikhail Alexeev\.Rider2019.3\config\scratches" t="IncludeRecursive" />
     <e p="C:\Users\Mikhail Alexeev\.Rider2019.3\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Mikhail Alexeev\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Bitrising.-327231497.00" t="ExcludeRecursive" />
   </component>

@@ -5,21 +5,20 @@ using UnityEngine.UI;
 
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class Player : MonoBehaviour
+public class Controller : MonoBehaviour
 {
     public int moveForce;
-    public Joystick joystick;
-    public Button joystickButton;
+    [Header("Joystick")]
+    public Joystick moveStick;
+    public Button button;
     [Header("Jump controls")] public float jumpForce;
     public float fallMultiplier;
     public float lowJumpMultiplier;
     [Header("Jump Punch Effect")] public Vector2 scale;
     public float duration;
     public float elasticity;
-    [Header("UI")] public Button restartButton;
 
     private TriggerDetector triggerDetector;
-
 
     private Rigidbody2D rb;
     private float horizontalInput;
@@ -53,7 +52,7 @@ public class Player : MonoBehaviour
 
     void JoystickMove()
     {
-        rb.AddForce(new Vector2(joystick.Horizontal * moveForce, 0.0f));
+        rb.AddForce(new Vector2(moveStick.Horizontal * moveForce, 0.0f));
     }
 
     public void JoystickPressed()
@@ -70,15 +69,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("DeathZone"))
-        {
-            restartButton.gameObject.SetActive(true);
-            gameObject.SetActive(false);
-        }
-    }
-
     private void OnCollisionExit2D(Collision2D other)
     {
         if (other.transform.GetComponentInParent<Platform>() != null)
@@ -86,7 +76,6 @@ public class Player : MonoBehaviour
             transform.SetParent(null);
         }
     }
-
 
     void Jump()
     {
@@ -112,11 +101,13 @@ public class Player : MonoBehaviour
         {
             rb.velocity += Vector2.up * (Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime);
 
-            // Get this to work with joystick button
-            // else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.Space))
-            // {
-            //     rb.velocity += Vector2.up * (Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime);
-            // }
+           
+            
         }
+        // Need to make this work with joystick button
+        // else if (rb.velocity.y > 0)
+        // {
+        //     rb.velocity += Vector2.up * (Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime);
+        // }
     }
 }
