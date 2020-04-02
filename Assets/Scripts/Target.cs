@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class Target : MonoBehaviour
 {
-    public GameObject logic;
+    public SceneManagement logic;
 
   
     private void OnCollisionEnter2D(Collision2D other)
     {
-        logic.GetComponent<SceneManagement>().Win();
+        logic.Win();
     }
 }

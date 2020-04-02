@@ -23,11 +23,11 @@ public class SceneManagement : MonoBehaviour
     public OnRestartAction onRestartAction;
     public OnWinAction onWinAction;
 
-    private Scene currentScene;
+    private Scene _currentScene;
 
     private void Awake()
     {
-        currentScene = SceneManager.GetActiveScene();
+        _currentScene = SceneManager.GetActiveScene();
     }
 
     public void Restart()
@@ -35,12 +35,12 @@ public class SceneManagement : MonoBehaviour
         switch (onRestartAction)
         {
             case OnRestartAction.LoadThisScene:
-                SceneManager.LoadScene(currentScene.buildIndex);
+                SceneManager.LoadScene(_currentScene.buildIndex);
                 break;
             case OnRestartAction.LoadNextScene:
-                if (currentScene.buildIndex < SceneManager.sceneCountInBuildSettings-1)
+                if (_currentScene.buildIndex < SceneManager.sceneCountInBuildSettings-1)
                 {
-                    SceneManager.LoadScene(currentScene.buildIndex + 1);
+                    SceneManager.LoadScene(_currentScene.buildIndex + 1);
                 }
                 else
                 {
@@ -55,12 +55,12 @@ public class SceneManagement : MonoBehaviour
         switch (onWinAction)
         {
             case OnWinAction.LoadThisScene:
-                SceneManager.LoadScene(currentScene.buildIndex);
+                SceneManager.LoadScene(_currentScene.buildIndex);
                 break;
             case OnWinAction.LoadNextScene:
-                if (currentScene.buildIndex < SceneManager.sceneCountInBuildSettings-1)
+                if (_currentScene.buildIndex < SceneManager.sceneCountInBuildSettings-1)
                 {
-                    SceneManager.LoadScene(currentScene.buildIndex + 1);
+                    SceneManager.LoadScene(_currentScene.buildIndex + 1);
                 }
                 else
                 {

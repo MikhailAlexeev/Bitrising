@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class TriggerDetector : MonoBehaviour
 {
-    public bool InTrigger;
+    public bool inTrigger;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        InTrigger = true;
+        inTrigger = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        InTrigger = false;
+        inTrigger = false;
     }
 }

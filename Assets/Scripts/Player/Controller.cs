@@ -17,23 +17,24 @@ public class Controller : MonoBehaviour
     [Header("Jump Punch Effect")] public Vector2 scale;
     public float duration;
     public float elasticity;
+    
 
-    private TriggerDetector triggerDetector;
+    private TriggerDetector _triggerDetector;
 
-    private Rigidbody2D rb;
-    private float horizontalInput;
-    private bool jumpInput;
+    private Rigidbody2D _rb;
+    private float _horizontalInput;
+    private bool _jumpInput;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        triggerDetector = GetComponentInChildren<TriggerDetector>();
+        _rb = GetComponent<Rigidbody2D>();
+        _triggerDetector = GetComponentInChildren<TriggerDetector>();
     }
 
     void Update()
     {
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        jumpInput = Input.GetKeyDown(KeyCode.Space);
+        _horizontalInput = Input.GetAxisRaw("Horizontal");
+        _jumpInput = Input.GetKeyDown(KeyCode.Space);
 
         JoystickMove();
     }
@@ -47,17 +48,17 @@ public class Controller : MonoBehaviour
 
     void MoveHorizontal()
     {
-        rb.velocity += new Vector2(horizontalInput, 0) * (moveForce * Time.deltaTime);
+        _rb.velocity += new Vector2(_horizontalInput, 0) * (moveForce * Time.deltaTime);
     }
 
     void JoystickMove()
     {
-        rb.AddForce(new Vector2(moveStick.Horizontal * moveForce, 0.0f));
+        _rb.AddForce(new Vector2(moveStick.Horizontal * moveForce, 0.0f));
     }
 
     public void JoystickPressed()
     {
-        jumpInput = true;
+        _jumpInput = true;
         Jump();
     }
 
@@ -79,12 +80,12 @@ public class Controller : MonoBehaviour
 
     void Jump()
     {
-        if (jumpInput)
+        if (_jumpInput)
         {
-            if (triggerDetector.InTrigger)
+            if (_triggerDetector.inTrigger)
             {
                 JumpPunch();
-                rb.AddForce(Vector2.up * jumpForce);
+                _rb.AddForce(Vector2.up * jumpForce);
                 transform.SetParent(null);
             }
         }
@@ -97,9 +98,9 @@ public class Controller : MonoBehaviour
 
     void JumpAmplifier()
     {
-        if (rb.velocity.y < 0)
+        if (_rb.velocity.y < 0)
         {
-            rb.velocity += Vector2.up * (Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime);
+            _rb.velocity += Vector2.up * (Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime);
 
            
             
