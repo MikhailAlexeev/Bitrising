@@ -1057,13 +1057,7 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1872046142}
-    - target: {fileID: 2067136383588892027, guid: ef18dcd2ac176ef4f81b287801e0dfd8,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: JoystickPressed
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2067136383035169669, guid: ef18dcd2ac176ef4f81b287801e0dfd8, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef18dcd2ac176ef4f81b287801e0dfd8, type: 3}
 --- !u!224 &296691770 stripped
 RectTransform:
