@@ -17,9 +17,10 @@ public class Controller : MonoBehaviour
     [Header("Jump Punch Effect")] public Vector2 scale;
     public float duration;
     public float elasticity;
-    
+
 
     private TriggerDetector _triggerDetector;
+    private VfxSpawner _vfxSpawner;
 
     private Rigidbody2D _rb;
     private float _horizontalInput;
@@ -29,6 +30,7 @@ public class Controller : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _triggerDetector = GetComponentInChildren<TriggerDetector>();
+        _vfxSpawner = GetComponent<VfxSpawner>();
     }
 
     void Update()
@@ -84,6 +86,7 @@ public class Controller : MonoBehaviour
         {
             if (_triggerDetector.inTrigger)
             {
+                _vfxSpawner.PlayJumpVFX();
                 JumpPunch();
                 _rb.AddForce(Vector2.up * jumpForce);
                 transform.SetParent(null);

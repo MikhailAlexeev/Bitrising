@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,17 +8,21 @@ public class Killer : MonoBehaviour
 {
     [Header("UI")] 
     public Button restartButton;
+    
+    private VfxSpawner _vfxSpawner;
 
-    public VfxSpawner vfxSpawner;
-    // Start is called before the first frame update
-   
+    private void Start()
+    {
+        _vfxSpawner = GetComponent<VfxSpawner>();
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("DeathZone"))
         {
-            if (vfxSpawner != null)
+            if (_vfxSpawner != null)
             {
-                vfxSpawner.PlayKilledVFX();
+                _vfxSpawner.PlayKilledVFX();
             }
             restartButton.gameObject.SetActive(true);
         }

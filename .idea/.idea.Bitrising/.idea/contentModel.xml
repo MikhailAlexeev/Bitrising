@@ -7,6 +7,7 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="FPSUnlocker.cs" t="Include" />
+          <e p="ObjectActivator.cs" t="Include" />
           <e p="Platform.cs" t="Include" />
           <e p="Player" t="Include">
             <e p="Controller.cs" t="Include" />
@@ -14,6 +15,7 @@
             <e p="TriggerDetector.cs" t="Include" />
             <e p="VfxSpawner.cs" t="Include" />
           </e>
+          <e p="TagType.cs" t="Include" />
           <e p="Target.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="SceneManagement.cs" t="Include" />

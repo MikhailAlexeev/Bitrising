@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Animator), typeof(Controller), typeof(Killer))]
 public class VfxSpawner : MonoBehaviour
 {
     public string hittedTriggerName = "Hitted";
     public string killedTriggerName = "Killed";
+    public string jumpedTriggerName = "Jumped";
     private Animator _animator;
 
     private void Awake()
@@ -23,5 +24,10 @@ public class VfxSpawner : MonoBehaviour
     public void PlayKilledVFX()
     {
         _animator.SetTrigger(killedTriggerName);
+    }
+
+    public void PlayJumpVFX()
+    {
+        _animator.SetTrigger(jumpedTriggerName);
     }
 }
