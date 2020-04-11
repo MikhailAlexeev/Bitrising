@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3434921207448935835}
   - component: {fileID: 3434921207448935834}
   - component: {fileID: 3434921207448935833}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 3434921207652467880}
   - component: {fileID: 3434921207652467886}
   - component: {fileID: 3434921207652467887}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: Squares
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4845,7 +4845,7 @@ GameObject:
   - component: {fileID: 3434921207673571950}
   - component: {fileID: 3434921207673571948}
   - component: {fileID: 3434921207673571949}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9600,7 +9600,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3434921207675267917}
   - component: {fileID: 3434921207675267916}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: Trail (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9737,7 +9737,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3434921207741825640}
   - component: {fileID: 3434921207741825647}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: Trail (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9879,7 +9879,7 @@ GameObject:
   - component: {fileID: 3434921208166076627}
   - component: {fileID: 3434921208166076625}
   - component: {fileID: 3434921208166076588}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -10114,7 +10114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3434921208466777791}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: Trails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10150,7 +10150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3434921208800430480}
   - component: {fileID: 3434921208800430487}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: Trail (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10288,9 +10288,9 @@ GameObject:
   - component: {fileID: 3434921208852312285}
   - component: {fileID: 3434921208852312259}
   - component: {fileID: 3434921208852312284}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: Sprite
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10396,7 +10396,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3434921208866060205}
   - component: {fileID: 3434921208866060204}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: Trail (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10533,7 +10533,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6321142547750745181}
   - component: {fileID: 8005607858313449568}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: JumpTrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}

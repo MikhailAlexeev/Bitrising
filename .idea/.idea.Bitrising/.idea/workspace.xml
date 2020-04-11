@@ -41,11 +41,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Platform.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Controller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/VfxSpawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Killer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TagType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ObjectActivator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/PlatformEnemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Killer.cs" />
       </list>
     </option>
   </component>
@@ -122,7 +122,8 @@
       <workItem from="1585958675935" duration="992000" />
       <workItem from="1585959771483" duration="512000" />
       <workItem from="1586627430616" duration="588000" />
-      <workItem from="1586628084660" duration="1112000" />
+      <workItem from="1586628084660" duration="2896000" />
+      <workItem from="1586631107069" duration="402000" />
     </task>
     <servers />
   </component>

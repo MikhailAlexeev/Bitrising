@@ -1,29 +1,39 @@
-﻿    using UnityEngine;
-    public class PlatformEnemy : Enemy
-    {
-        
-        public Collider2D Platform;
-        private float _platformWidth;
-        private bool _direction;
+﻿using UnityEngine;
 
-        private new void Start()
+public class PlatformEnemy : Enemy
+{
+    public Collider2D platform;
+    private float _platformWidth;
+    private bool _rightDirection;
+
+    private new void Start()
+    {
+        base.Start();
+        _platformWidth = platform.bounds.size.x;
+    }
+
+    private void Update()
+    {
+        var position = platform.transform.position.x;
+        var left = position - _platformWidth / 3;
+        var right = position + _platformWidth / 3;
+
+        if (transform.position.x < left)
         {
-            base.Start();
-            _platformWidth = Platform.bounds.size.x;
+            _rightDirection = true;
+        }
+        else if (transform.position.x > right)
+        {
+            _rightDirection = false;
         }
 
-        private void Update()
+        if (_rightDirection)
         {
-
-            var position = Platform.transform.position.x;
-            var left = position - _platformWidth / 3;
-            var right = position + _platformWidth / 3;
-        
-            if (transform.position.x < left)
-                _direction = true;
-            else if (transform.position.x > right)
-                _direction = false;
-            if (_direction) MoveRight();
-            else MoveLeft();
+            MoveRight();
+        }
+        else
+        {
+            MoveLeft();
         }
     }
+}
