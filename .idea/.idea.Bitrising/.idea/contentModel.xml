@@ -6,6 +6,10 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
+          <e p="Enemies" t="Include">
+            <e p="Enemy.cs" t="Include" />
+            <e p="PlatformEnemy.cs" t="Include" />
+          </e>
           <e p="FPSUnlocker.cs" t="Include" />
           <e p="ObjectActivator.cs" t="Include" />
           <e p="Platform.cs" t="Include" />
