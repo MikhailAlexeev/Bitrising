@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using Player;
 using UnityEngine;
 
 public class Platform : MonoBehaviour

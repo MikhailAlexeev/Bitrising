@@ -11,7 +11,6 @@ public class ObjectActivator : MonoBehaviour
     public GameObject[] objectsToActivate;
 
     public CinemachineTargetGroup cinemachineTargetGroup;
-    // Start is called before the first frame update
 
     private void OnTriggerEnter2D(Collider2D other)
     {

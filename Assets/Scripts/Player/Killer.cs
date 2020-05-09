@@ -1,34 +1,34 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class Killer : MonoBehaviour
+namespace Player
 {
-    public Button restartButton;
-
-    private VfxSpawner _vfxSpawner;
-
-    private void Start()
+    public class Killer : MonoBehaviour
     {
-        _vfxSpawner = GetComponent<VfxSpawner>();
-    }
+        public Button restartButton;
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("DeathZone")
-            || other.gameObject.CompareTag("Enemy")
-            || other.gameObject.CompareTag("Player"))
+        private VfxSpawner _vfxSpawner;
+
+        private void Start()
         {
-            if (_vfxSpawner != null)
-            {
-                _vfxSpawner.PlayKilledVFX();
-            }
+            _vfxSpawner = GetComponent<VfxSpawner>();
+        }
 
-            if (gameObject.CompareTag("Player"))
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.gameObject.CompareTag("DeathZone")
+                || other.gameObject.CompareTag("Enemy")
+                || other.gameObject.CompareTag("Player"))
             {
-                restartButton.gameObject.SetActive(true);
+                if (_vfxSpawner != null)
+                {
+                    _vfxSpawner.PlayKilledVFX();
+                }
+
+                if (gameObject.CompareTag("Player"))
+                {
+                    restartButton.gameObject.SetActive(true);
+                }
             }
         }
     }

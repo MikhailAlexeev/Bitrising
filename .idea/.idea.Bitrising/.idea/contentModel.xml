@@ -6,11 +6,24 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
+          <e p="Behaviours" t="Include">
+            <e p="PlatformBehaviour.cs" t="Include" />
+          </e>
           <e p="Enemies" t="Include">
             <e p="Enemy.cs" t="Include" />
             <e p="PlatformEnemy.cs" t="Include" />
           </e>
+          <e p="Enums" t="Include">
+            <e p="PlatformType.cs" t="Include" />
+          </e>
+          <e p="Factories" t="Include">
+            <e p="PlatformFactory.cs" t="Include" />
+          </e>
           <e p="FPSUnlocker.cs" t="Include" />
+          <e p="GameController.cs" t="Include" />
+          <e p="Interfaces" t="Include">
+            <e p="IKillable.cs" t="Include" />
+          </e>
           <e p="ObjectActivator.cs" t="Include" />
           <e p="Platform.cs" t="Include" />
           <e p="Player" t="Include">
@@ -18,6 +31,12 @@
             <e p="Killer.cs" t="Include" />
             <e p="TriggerDetector.cs" t="Include" />
             <e p="VfxSpawner.cs" t="Include" />
+          </e>
+          <e p="ProcGen" t="Include">
+            <e p="LevelSegmentSettingsData.cs" t="Include" />
+          </e>
+          <e p="Static" t="Include">
+            <e p="AssetsPaths.cs" t="Include" />
           </e>
           <e p="TagType.cs" t="Include" />
           <e p="Target.cs" t="Include" />
@@ -160,8 +179,8 @@
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
-    <e p="C:\Users\Mikhail Alexeev\.Rider2019.3\config\scratches" t="IncludeRecursive" />
-    <e p="C:\Users\Mikhail Alexeev\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Mikhail Alexeev\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Bitrising.95467988.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Mikhail Alexeev\AppData\local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Mikhail Alexeev\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_Bitrising.95467988.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Mikhail Alexeev\AppData\Roaming\JetBrains\Rider2020.1\scratches" t="IncludeRecursive" />
   </component>
 </project>

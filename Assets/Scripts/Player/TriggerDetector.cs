@@ -1,18 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class TriggerDetector : MonoBehaviour
+namespace Player
 {
-    public bool inTrigger;
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    public class TriggerDetector : MonoBehaviour
     {
-        inTrigger = true;
-    }
+        public bool inTrigger;
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        inTrigger = false;
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            inTrigger = true;
+        }
+
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            inTrigger = false;
+        }
     }
 }

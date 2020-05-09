@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FPSUnlocker : MonoBehaviour
+public class FpsUnlocker : MonoBehaviour
 {
     public int targetFramerate;
-    void Awake()
+
+    private void Awake()
     {
         Application.targetFrameRate = targetFramerate;
     }
