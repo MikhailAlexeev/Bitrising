@@ -3,7 +3,7 @@
     using UnityEngine;
     using Behaviours;
     using Enums;
-    using Static;
+    using Statics;
     using Object = UnityEngine.Object;
 
     namespace Factories

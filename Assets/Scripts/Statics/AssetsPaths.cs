@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Enums;
 
-namespace Static
+namespace Statics
 {
     public static class AssetsPaths
     {

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Statics;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace Player
@@ -16,16 +17,16 @@ namespace Player
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.gameObject.CompareTag("DeathZone")
-                || other.gameObject.CompareTag("Enemy")
-                || other.gameObject.CompareTag("Player"))
+            if (other.gameObject.CompareTag(TagManager.GetTag(TagType.Deathzone))
+                || other.gameObject.CompareTag(TagManager.GetTag(TagType.Enemy))
+                || other.gameObject.CompareTag(TagManager.GetTag(TagType.Player)))
             {
                 if (_vfxSpawner != null)
                 {
                     _vfxSpawner.PlayKilledVFX();
                 }
 
-                if (gameObject.CompareTag("Player"))
+                if (gameObject.CompareTag(TagManager.GetTag(TagType.Player)))
                 {
                     restartButton.gameObject.SetActive(true);
                 }

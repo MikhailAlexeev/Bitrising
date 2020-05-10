@@ -20,13 +20,11 @@ namespace Enemies
     
         public void MoveLeft()
         {
-            //if (triggerDetector.InTrigger)
             _rb.AddForce(new Vector2(-moveForce, 0), ForceMode2D.Force);
         }
 
         public void MoveRight()
         {
-            //if (triggerDetector.InTrigger)
             _rb.AddForce(new Vector2(moveForce, 0), ForceMode2D.Force);
         }
     }

@@ -35,8 +35,9 @@
           <e p="ProcGen" t="Include">
             <e p="LevelSegmentSettingsData.cs" t="Include" />
           </e>
-          <e p="Static" t="Include">
+          <e p="Statics" t="Include">
             <e p="AssetsPaths.cs" t="Include" />
+            <e p="TagManager.cs" t="Include" />
           </e>
           <e p="TagType.cs" t="Include" />
           <e p="Target.cs" t="Include" />
