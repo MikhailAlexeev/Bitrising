@@ -30,7 +30,8 @@ namespace Player
                 if (gameObject.CompareTag(TagManager.GetTag(TagType.Player)))
                 {
                     restartButton.gameObject.SetActive(true);
-                    
+                    gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
+
                 }
             }
         }

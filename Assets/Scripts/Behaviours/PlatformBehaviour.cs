@@ -26,6 +26,7 @@ namespace Behaviours
             if (other.CompareTag(TagManager.GetTag(TagType.Player)))
             {
                 _levelSegmentSettingsData.Generate();
+                _isGenerate = false;
             }
         }
     }
