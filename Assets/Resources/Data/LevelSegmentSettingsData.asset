@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0d4b009924aadb45a813730e962936d, type: 3}
   m_Name: LevelSegmentSettingsData
   m_EditorClassIdentifier: 
-  numberOfPlatforms: 10
+  numberOfPlatforms: 100
   platformsType: 010000000200000003000000

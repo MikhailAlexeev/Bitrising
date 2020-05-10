@@ -19,8 +19,10 @@ namespace ProcGen
             _spawnPosition = Vector3.zero;
         }
 
+
         public void Generate()
         {
+            _spawnPosition = Vector3.zero;
             for (int i = 1; i <= numberOfPlatforms; i++)
             {
                 var platfomType = platformsType[Random.Range(0, platformsType.Length)];

@@ -11,7 +11,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Static/AssetsPaths.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Store/Joystick Pack/Scripts/Joysticks/FixedJoystick.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FPSUnlocker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FpsUnlocker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IKillable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D815B7EF-AC42-4EEB-8E05-3965CCCB1F98/c7/4da7c96b/SceneManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
@@ -41,12 +41,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Target.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/SceneManagement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Platform.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TagType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IKillable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enums/PlatformType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enums/PlatformTypes.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Controller.cs" />
@@ -58,8 +56,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/TriggerDetector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/VfxSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Factories/PlatformFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ProcGen/LevelSegmentSettingsData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Behaviours/PlatformBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FpsUnlocker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/SceneManagement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ProcGen/LevelSegmentSettingsData.cs" />
       </list>
     </option>
   </component>
@@ -129,7 +130,7 @@
       <workItem from="1587901780452" duration="973000" />
       <workItem from="1588345912090" duration="3459000" />
       <workItem from="1589033155455" duration="141000" />
-      <workItem from="1589033672728" duration="7152000" />
+      <workItem from="1589033672728" duration="14953000" />
     </task>
     <servers />
   </component>
