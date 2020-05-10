@@ -1,4 +1,5 @@
-﻿using Statics;
+﻿using ProcGen;
+using Statics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,6 +30,7 @@ namespace Player
                 if (gameObject.CompareTag(TagManager.GetTag(TagType.Player)))
                 {
                     restartButton.gameObject.SetActive(true);
+                    
                 }
             }
         }

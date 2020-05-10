@@ -54,7 +54,7 @@ public class Platform : MonoBehaviour
     }
 
     // Make this work with Player parenting to Platform
-    // What ot do with player size?
+    // What to do with player size?
     // private void OnCollisionEnter2D(Collision2D other)
     // {
     //     if (_triggerDetector.inTrigger)

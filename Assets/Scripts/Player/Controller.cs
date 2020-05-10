@@ -106,7 +106,8 @@ namespace Player
                 _rb.velocity += Vector2.up * (Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime);
            
             }
-            // Need to make this work with joystick button
+            
+            // Как это сделать с кнопкой джойстика?
             // else if (rb.velocity.y > 0)
             // {
             //     rb.velocity += Vector2.up * (Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime);

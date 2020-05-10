@@ -7,6 +7,7 @@ public sealed class GameController : MonoBehaviour
 
    private void Awake()
    {
+      levelSegmentSettingsData._spawnPosition = Vector3.zero;
       levelSegmentSettingsData.Generate();
    }
 }
