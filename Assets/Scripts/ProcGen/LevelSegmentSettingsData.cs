@@ -1,7 +1,9 @@
 ﻿using Behaviours;
 using Enums;
 using Factories;
+using Structs;
 using UnityEngine;
+using UnityEngine.Animations;
 using Random = UnityEngine.Random;
 
 namespace ProcGen
@@ -10,16 +12,19 @@ namespace ProcGen
     public sealed class LevelSegmentSettingsData : ScriptableObject
     {
         public Vector3 spawnPosition;
-        
+
         [SerializeField] [Range(1, 100)] private int numberOfPlatforms;
         [SerializeField] private bool generateNewSegmentOnLastPlatform;
-        [SerializeField] private PlatformType[] platformsType;
+        [SerializeField] private PlatformData[] platformsType;
 
         private PlatformFactory _platformFactory;
+        private TrapFactory _trapFactory;
         private Transform _segmentRoot;
+
         private void OnEnable()
         {
             _platformFactory = new PlatformFactory();
+            _trapFactory = new TrapFactory();
             spawnPosition = Vector3.zero;
         }
 
@@ -29,8 +34,8 @@ namespace ProcGen
             _segmentRoot = new GameObject("Segment Root").transform;
             for (int i = 1; i <= numberOfPlatforms; i++)
             {
-                var platfomType = platformsType[Random.Range(0, platformsType.Length)];
-                GeneratePlatform(platfomType);
+                var platform = platformsType[Random.Range(0, platformsType.Length)];
+                GeneratePlatform(platform);
             }
 
             if (generateNewSegmentOnLastPlatform)
@@ -40,12 +45,23 @@ namespace ProcGen
             }
         }
 
-        private void GeneratePlatform(PlatformType platformType)
+        private void GeneratePlatform(PlatformData platformData)
         {
-            var platform = _platformFactory.GetPlatform(platformType);
+            var platform = _platformFactory.GetPlatform(platformData.type);
             platform.transform.position = spawnPosition;
-            spawnPosition = new Vector3(spawnPosition.x + platform.GetBorder(), 0.0f);
+            spawnPosition =
+                new Vector3(
+                    spawnPosition.x + platform.GetBorder() +
+                    Random.Range(platformData.randomMargin.x, platformData.randomMargin.y),
+                    Random.Range(platformData.randomHeight.x, platformData.randomHeight.y));
             platform.transform.parent = _segmentRoot;
+
+            if (platformData.trapData.creationChance > Random.Range(0,100))
+            {
+                var trap = _trapFactory.GetTrap(platformData.trapData.type);
+                trap.transform.parent = platform.transform;
+                trap.transform.localPosition = platform.GetPointSpawnTrap();
+            }
         }
     }
 }

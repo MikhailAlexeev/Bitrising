@@ -31,10 +31,11 @@
           </e>
           <e p="Enums" t="Include">
             <e p="PlatformType.cs" t="Include" />
+            <e p="TrapType.cs" t="Include" />
           </e>
           <e p="Factories" t="Include">
-            <e p="AdditionalObjectFactory.cs" t="Include" />
             <e p="PlatformFactory.cs" t="Include" />
+            <e p="TrapFactory.cs" t="Include" />
           </e>
           <e p="FPSUnlocker.cs" t="Include" />
           <e p="GameController.cs" t="Include" />
@@ -55,6 +56,10 @@
           <e p="Statics" t="Include">
             <e p="AssetsPaths.cs" t="Include" />
             <e p="TagManager.cs" t="Include" />
+          </e>
+          <e p="Structs" t="Include">
+            <e p="PlatformData.cs" t="Include" />
+            <e p="TrapData.cs" t="Include" />
           </e>
           <e p="TagType.cs" t="Include" />
           <e p="Target.cs" t="Include" />

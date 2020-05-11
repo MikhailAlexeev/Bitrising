@@ -12,5 +12,10 @@ namespace Statics
             {PlatformType.Long, "Platforms/Long"}
         };
         
+        public static readonly Dictionary<TrapType, string> Traps = new Dictionary<TrapType, string>
+        {
+            {TrapType.Spike, "Traps/Spike"},
+            {TrapType.Saw, "Traps/Saw"},
+        };
     }
 }

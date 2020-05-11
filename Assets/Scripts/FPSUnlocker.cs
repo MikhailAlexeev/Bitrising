@@ -8,6 +8,4 @@ public class FpsUnlocker : MonoBehaviour
     {
         Application.targetFrameRate = targetFramerate;
     }
-
-   
 }

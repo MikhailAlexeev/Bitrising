@@ -6,8 +6,8 @@ namespace Behaviours
 {
     public class PlatformBehaviour : MonoBehaviour
     {
-        [SerializeField] private LevelSegmentSettingsData _levelSegmentSettingsData;
-        [SerializeField] private Transform _pointSpawnAdditionalObjects;
+        [SerializeField] private LevelSegmentSettingsData levelSegmentSettingsData;
+        [SerializeField] private Transform pointSpawnTrap;
         private bool _isGenerate;
 
         public float GetBorder()
@@ -17,9 +17,9 @@ namespace Behaviours
             return child.localPosition.x + offsetX;
         }
 
-        public Vector3 GetPointSpawnAdditionalObjects()
+        public Vector3 GetPointSpawnTrap()
         {
-            return _pointSpawnAdditionalObjects.position;
+            return pointSpawnTrap.localPosition;
         }
 
         public void GenerateNewSegment()
@@ -31,7 +31,7 @@ namespace Behaviours
         {
             if (other.CompareTag(TagManager.GetTag(TagType.Player)))
             {
-                _levelSegmentSettingsData.Generate();
+                levelSegmentSettingsData.Generate();
                 _isGenerate = false;
             }
         }
