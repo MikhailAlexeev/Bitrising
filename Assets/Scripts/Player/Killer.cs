@@ -1,5 +1,4 @@
-﻿using ProcGen;
-using Statics;
+﻿using Statics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,9 +17,10 @@ namespace Player
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.gameObject.CompareTag(TagManager.GetTag(TagType.Deathzone))
+            if (other.gameObject.CompareTag(TagManager.GetTag(TagType.DeathZone))
                 || other.gameObject.CompareTag(TagManager.GetTag(TagType.Enemy))
-                || other.gameObject.CompareTag(TagManager.GetTag(TagType.Player)))
+                || other.gameObject.CompareTag(TagManager.GetTag(TagType.Player))
+                || other.gameObject.CompareTag(TagManager.GetTag(TagType.Saw)))
             {
                 if (_vfxSpawner != null)
                 {

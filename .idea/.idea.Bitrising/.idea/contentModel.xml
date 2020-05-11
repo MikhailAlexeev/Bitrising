@@ -6,6 +6,9 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
+          <e p="AnimationSnippets" t="Include">
+            <e p="Rotator.cs" t="Include" />
+          </e>
           <e p="Behaviours" t="Include">
             <e p="AutoHideBehaviour.cs" t="Include" />
             <e p="DeathZoneBehaviour.cs" t="Include" />
@@ -19,6 +22,7 @@
             <e p="PlatformType.cs" t="Include" />
           </e>
           <e p="Factories" t="Include">
+            <e p="AdditionalObjectFactory.cs" t="Include" />
             <e p="PlatformFactory.cs" t="Include" />
           </e>
           <e p="FPSUnlocker.cs" t="Include" />

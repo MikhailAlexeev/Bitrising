@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: df18fb4911b9e27499902eeea37a9efb
+guid: 54e3b23fbe4b44344b0e612a4cc0c4fa
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -20,7 +20,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
@@ -49,7 +49,7 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 1
+  alphaIsTransparency: 0
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
@@ -57,46 +57,10 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: 4
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: 4
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: 4
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 4
@@ -111,15 +75,13 @@ TextureImporter:
     serializedVersion: 2
     sprites: []
     outline:
-    - - {x: -2, y: -2}
-      - {x: -2, y: 2}
-      - {x: 2, y: 2}
-      - {x: 2, y: -2}
+    - - {x: 0, y: 2}
+      - {x: -1.7320508, y: -1.0000001}
+      - {x: 1.7320509, y: -0.9999998}
     physicsShape:
-    - - {x: -2, y: -2}
-      - {x: -2, y: 2}
-      - {x: 2, y: 2}
-      - {x: 2, y: -2}
+    - - {x: 0, y: 2}
+      - {x: -1.7320508, y: -1.0000001}
+      - {x: 1.7320509, y: -0.9999998}
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
     internalID: 0

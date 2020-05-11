@@ -9,25 +9,24 @@ namespace ProcGen
     [CreateAssetMenu(fileName = "LevelSegmentSettingsData", menuName = "Data/LevelSettings/LevelSegmentSettingsData")]
     public sealed class LevelSegmentSettingsData : ScriptableObject
     {
-        public Vector3 _spawnPosition;
+        public Vector3 spawnPosition;
         
         [SerializeField] [Range(1, 100)] private int numberOfPlatforms;
         [SerializeField] private bool generateNewSegmentOnLastPlatform;
         [SerializeField] private PlatformType[] platformsType;
 
         private PlatformFactory _platformFactory;
-        private Transform _procGenRoot;
+        private Transform _segmentRoot;
         private void OnEnable()
         {
             _platformFactory = new PlatformFactory();
-            _spawnPosition = Vector3.zero;
+            spawnPosition = Vector3.zero;
         }
 
 
         public void Generate()
         {
-            //_spawnPosition = Vector3.zero;
-            _procGenRoot = new GameObject("ProcGen Root").transform;
+            _segmentRoot = new GameObject("Segment Root").transform;
             for (int i = 1; i <= numberOfPlatforms; i++)
             {
                 var platfomType = platformsType[Random.Range(0, platformsType.Length)];
@@ -36,7 +35,7 @@ namespace ProcGen
 
             if (generateNewSegmentOnLastPlatform)
             {
-                var child = _procGenRoot.GetChild(_procGenRoot.childCount - 1).GetComponent<PlatformBehaviour>();
+                var child = _segmentRoot.GetChild(_segmentRoot.childCount - 1).GetComponent<PlatformBehaviour>();
                 child.GenerateNewSegment();
             }
         }
@@ -44,9 +43,9 @@ namespace ProcGen
         private void GeneratePlatform(PlatformType platformType)
         {
             var platform = _platformFactory.GetPlatform(platformType);
-            platform.transform.position = _spawnPosition;
-            _spawnPosition = new Vector3(_spawnPosition.x + platform.GetBorder(), 0.0f);
-            platform.transform.parent = _procGenRoot;
+            platform.transform.position = spawnPosition;
+            spawnPosition = new Vector3(spawnPosition.x + platform.GetBorder(), 0.0f);
+            platform.transform.parent = _segmentRoot;
         }
     }
 }

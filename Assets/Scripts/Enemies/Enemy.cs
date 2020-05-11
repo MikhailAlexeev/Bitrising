@@ -17,13 +17,13 @@ namespace Enemies
             _triggerDetector = GetComponent<TriggerDetector>();
             _vfxSpawner = GetComponent<VfxSpawner>();
         }
-    
-        public void MoveLeft()
+
+        protected void MoveLeft()
         {
             _rb.AddForce(new Vector2(-moveForce, 0), ForceMode2D.Force);
         }
 
-        public void MoveRight()
+        protected void MoveRight()
         {
             _rb.AddForce(new Vector2(moveForce, 0), ForceMode2D.Force);
         }

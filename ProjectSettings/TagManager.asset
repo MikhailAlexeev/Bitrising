@@ -6,6 +6,7 @@ TagManager:
   tags:
   - DeathZone
   - Enemy
+  - Saw
   layers:
   - Default
   - TransparentFX

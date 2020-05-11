@@ -8,18 +8,24 @@ public class AutoHideBehaviour : MonoBehaviour
     [SerializeField] private float hideDurationSec;
     [SerializeField] private Ease hideEaseType;
     private float _passedSec;
-    private Transform _childTransform;
+    private Transform _objectToHide;
 
     private void Start()
     {
         _passedSec = 0.0f;
-        _childTransform = gameObject.transform.GetChild(0);
+        if (gameObject.transform.childCount>0)
+        {
+            _objectToHide = gameObject.transform.GetChild(0);
+        }
+        else
+        {
+            _objectToHide = gameObject.transform;
+        }
     }
 
     void Update()
     {
         AutoHide();
-        
     }
 
     private void AutoHide()
@@ -30,8 +36,8 @@ public class AutoHideBehaviour : MonoBehaviour
             if (_passedSec >= hideAfterSec)
             {
                 _passedSec = 0.0f;
-                _childTransform.DOScale(0, hideDurationSec).SetEase(hideEaseType);
-                if (_childTransform.localScale.magnitude <= 0.001f)
+                _objectToHide.DOScale(0, hideDurationSec).SetEase(hideEaseType);
+                if (_objectToHide.localScale.magnitude <= 0.001f)
                 {
                     Destroy(gameObject);
                 }

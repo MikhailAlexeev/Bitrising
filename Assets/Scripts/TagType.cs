@@ -3,5 +3,6 @@
     None = 0,
     Player = 1,
     Enemy = 2,
-    Deathzone = 3,
+    DeathZone = 3,
+    Saw = 4,
 }

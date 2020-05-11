@@ -8,7 +8,8 @@ namespace Statics
         {
             {TagType.Player, "Player"},
             {TagType.Enemy, "Enemy"},
-            {TagType.Deathzone, "DeathZone"}
+            {TagType.DeathZone, "DeathZone"},
+            {TagType.Saw, "Saw"}
         };
 
         public static string GetTag(TagType type)

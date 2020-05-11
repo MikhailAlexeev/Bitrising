@@ -157,6 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _levelSegmentSettingsData: {fileID: 11400000, guid: 992a93af6885e5e41a3f034d1b815271,
     type: 2}
+  _pointSpawnAdditionalObjects: {fileID: 0}
 --- !u!114 &-4416995818463706616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,6 +311,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoHide: 1
-  hideAfterSec: 3
+  hideAfterSec: 6
   hideDurationSec: 0.5
   hideEaseType: 28
