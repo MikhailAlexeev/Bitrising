@@ -59,7 +59,7 @@ namespace Factories
         {
             if (!_long)
             {
-                _long = Resources.Load<PlatformBehaviour>(AssetsPaths.Platforms[PlatformType.Short]);
+                _long = Resources.Load<PlatformBehaviour>(AssetsPaths.Platforms[PlatformType.Long]);
             }
 
             return _long;

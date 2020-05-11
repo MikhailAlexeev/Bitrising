@@ -11,10 +11,11 @@ namespace ProcGen
     [CreateAssetMenu(fileName = "LevelSegmentSettingsData", menuName = "Data/LevelSettings/LevelSegmentSettingsData")]
     public sealed class LevelSegmentSettingsData : ScriptableObject
     {
-        public Vector3 spawnPosition;
+        [HideInInspector] public Vector3 spawnPosition;
 
-        [SerializeField] [Range(1, 100)] private int numberOfPlatforms;
+        [SerializeField] [Range(1, 10)] private int numberOfPlatforms;
         [SerializeField] private bool generateNewSegmentOnLastPlatform;
+        [SerializeField] private PlatformData firstPlatform;
         [SerializeField] private PlatformData[] platformsType;
 
         private PlatformFactory _platformFactory;
@@ -32,6 +33,7 @@ namespace ProcGen
         public void Generate()
         {
             _segmentRoot = new GameObject("Segment Root").transform;
+            GeneratePlatform(firstPlatform);
             for (int i = 1; i <= numberOfPlatforms; i++)
             {
                 var platform = platformsType[Random.Range(0, platformsType.Length)];

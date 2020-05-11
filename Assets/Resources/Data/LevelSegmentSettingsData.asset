@@ -12,13 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0d4b009924aadb45a813730e962936d, type: 3}
   m_Name: LevelSegmentSettingsData
   m_EditorClassIdentifier: 
-  spawnPosition: {x: 29.18418, y: 0, z: 0}
-  numberOfPlatforms: 2
+  spawnPosition: {x: 12.251766, y: 0.008948016, z: 0}
+  numberOfPlatforms: 1
   generateNewSegmentOnLastPlatform: 1
+  firstPlatform:
+    type: 3
+    randomHeight: {x: 0, y: 0}
+    randomMargin: {x: 1, y: 5}
+    trapData:
+      type: 0
+      creationChance: 0
   platformsType:
   - type: 1
     randomHeight: {x: 0, y: 0}
-    randomMargin: {x: 1, y: 5}
+    randomMargin: {x: 2, y: 5}
     trapData:
       type: 1
       creationChance: 20
@@ -29,8 +36,14 @@ MonoBehaviour:
       type: 1
       creationChance: 10
   - type: 3
-    randomHeight: {x: -0.3, y: 0.3}
-    randomMargin: {x: 1, y: 4.2415743}
+    randomHeight: {x: -0.5, y: 0.5}
+    randomMargin: {x: 3, y: 5}
     trapData:
       type: 2
       creationChance: 30
+  - type: 1
+    randomHeight: {x: -1, y: 1}
+    randomMargin: {x: 1, y: 2}
+    trapData:
+      type: 2
+      creationChance: 35

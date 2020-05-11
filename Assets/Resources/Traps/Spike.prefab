@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoHide: 1
-  hideAfterSec: 10
+  hideAfterSec: 8
   hideDurationSec: 1
   hideEaseType: 28
 --- !u!1 &6286443855824109930
