@@ -13,13 +13,13 @@ public class AutoHideBehaviour : MonoBehaviour
     private void Start()
     {
         _passedSec = 0.0f;
-        if (gameObject.transform.childCount>0)
+        if (transform.childCount>0)
         {
-            _objectToHide = gameObject.transform.GetChild(0);
+            _objectToHide = transform.GetChild(0);
         }
         else
         {
-            _objectToHide = gameObject.transform;
+            _objectToHide = transform;
         }
     }
 
