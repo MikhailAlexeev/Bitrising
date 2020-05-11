@@ -19,8 +19,7 @@ namespace Player
         {
             if (other.gameObject.CompareTag(TagManager.GetTag(TagType.DeathZone))
                 || other.gameObject.CompareTag(TagManager.GetTag(TagType.Enemy))
-                || other.gameObject.CompareTag(TagManager.GetTag(TagType.Player))
-                || other.gameObject.CompareTag(TagManager.GetTag(TagType.Saw)))
+                || other.gameObject.CompareTag(TagManager.GetTag(TagType.Player)))
             {
                 if (_vfxSpawner != null)
                 {

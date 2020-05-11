@@ -67,15 +67,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Behaviours/PlatformBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Factories/a.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Factories/PlatformFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Factories/AdditionalObjectFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TagType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Statics/TagManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ProcGen/LevelSegmentSettingsData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Killer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AnimationSnippets/Rotator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AnimationSnippets/Mover.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Behaviours/AutoHideBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Factories/AdditionalObjectFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Statics/TagManager.cs" />
       </list>
     </option>
   </component>
@@ -146,7 +146,7 @@
       <workItem from="1588345912090" duration="3459000" />
       <workItem from="1589033155455" duration="141000" />
       <workItem from="1589033672728" duration="20680000" />
-      <workItem from="1589197792180" duration="10918000" />
+      <workItem from="1589197792180" duration="11520000" />
     </task>
     <servers />
   </component>
