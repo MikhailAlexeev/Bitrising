@@ -7,6 +7,7 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="Behaviours" t="Include">
+            <e p="DeathZoneBehaviour.cs" t="Include" />
             <e p="PlatformBehaviour.cs" t="Include" />
           </e>
           <e p="Enemies" t="Include">
